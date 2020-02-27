@@ -1,0 +1,134 @@
+
+.cards-list{
+    display: flex;
+    justify-content: space-between;
+}
+.cards-list:before,
+.cards-list:after {
+    display: block;
+    content:'';
+    order: 1000;
+
+}
+.card,
+.cards-list:before,
+.cards-list:after {
+    flex: 0 0 30%; 
+}
+.card {
+    border:1px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 1em;
+    
+}
+
+.card-media {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 0.3em;
+}
+
+.card-media:before {
+    display: block;
+    content: '';
+    padding-top: 56.25%;
+ 
+}
+
+.card-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.card-media:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom:0;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.card-header {
+    padding: 0.2em 1.2em;
+    text-align: center;
+
+}
+
+.card-content {
+    padding: 0.2em 1.2em;
+
+}
+
+.card-footer {
+    border-top: 1px solid black;
+
+}
+.card-footer ul {
+    display: flex;
+
+}
+.card-footer li:first-child {
+    border-right: 1px solid black;
+}
+.card-footer li {
+    flex: 1 1 auto;
+    list-style: none outside;
+
+}
+.card-footer li a {
+    display: block;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
+
+}
+.card-footer li a:hover {
+    background: radial-gradient(ellipse at center, rgba(255,48,25,1) 0%,rgba(207,4,4,1) 100%);
+}
+
+
+@media (max-width: 600px) {
+    .card-footer li a {
+        padding: 0;
+    }
+    .card,
+    .cards-list:before,
+    .cards-list:after {
+    flex: 0 0 45%; 
+    }
+    .cards-list {
+        justify-content: space-around;
+    }
+    
+}
+
+@media (min-width: 600px) {
+    .card-footer li:nth-of-type(1) a:before  {
+        display: block;
+        position: absolute;
+        width: 20px;
+        font-family: "Font Awesome 5 Free";
+        content: "\f044";
+        color: white;
+
+    }
+    .card-footer li:nth-of-type(2) a:before  {
+        display: block;
+        position: absolute;
+        width: 20px;
+        font-family: "Font Awesome 5 Free";
+        content: "\f2ed";
+        color: white;
+
+    }
+    
+}
